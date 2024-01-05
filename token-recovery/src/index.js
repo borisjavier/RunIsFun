@@ -2,7 +2,13 @@ const Run = require('run-sdk')
 const fetch = require('isomorphic-fetch')
 
 Run.plugins.WhatsOnChain.prototype.spends = async (txid, vout) => {
-    const res = await fetch(`https://api.whatsonchain.com/v1/bsv/main/tx/${txid}/${vout}/spent`)
+    const res = await fetch(`https://api.whatsonchain.com/v1/bsv/main/tx/${txid}/${vout}/spent`,
+        {
+            headers: {
+                'Apikey': 'mainnet_6c81a97a917bdab017bb02cd0d98f794'
+            }
+        }
+    )
     if (res.status !== 200) {
         return null
     }
@@ -12,7 +18,7 @@ Run.plugins.WhatsOnChain.prototype.spends = async (txid, vout) => {
 
 const run = new Run({
     cache: new Run.plugins.LocalCache(),
-    state: new Run.plugins.LocalState(),
+    stateServer: new Run.plugins.LocalState(),
     api: 'whatsonchain'
 })
 
