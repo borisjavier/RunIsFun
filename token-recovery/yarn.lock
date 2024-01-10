@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@runonbitcoin/nimble@^1.0.14":
+  version "1.0.14"
+  resolved "https://registry.yarnpkg.com/@runonbitcoin/nimble/-/nimble-1.0.14.tgz#312c766dfb55b82ff9bca30ea7b8c32a2337cb4b"
+  integrity sha512-F5emsG7QmD3HRvk/zw+ygkeK0ijnlL+ifXRXliqzzlGH679dQpnW9Ophmcw4Uxgs9SaQgJDi7xa6veU1v+Sj7g==
+
 aes-js@^3.1.2:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/aes-js/-/aes-js-3.1.2.tgz#db9aabde85d5caabbfc0d4f2a4446960f627146a"
